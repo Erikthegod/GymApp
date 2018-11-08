@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainCameraViewController: CameraViewController {
 
@@ -48,9 +49,19 @@ class MainCameraViewController: CameraViewController {
         
         super._cameraUnavailableLabel = self.cameraUnavailableLabel
         super._capturingLivePhotoLabel = self.capturingLivePhotoLabel
+        
+        self.cameraUnavailableLabel.alpha = 0.0
+        self.capturingLivePhotoLabel.alpha = 0.0
 
         
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard Auth.auth().currentUser != nil else {
+            performSegue(withIdentifier: "showLoginVC", sender: nil)
+            return
+        }
     }
 
 

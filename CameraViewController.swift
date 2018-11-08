@@ -639,9 +639,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
             
             DispatchQueue.main.async {
                 if livePhotoMode == .on {
-                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: On", comment: "Live photo mode button on title"), for: [])
+                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live : On", comment: "Live photo mode button on title"), for: [])
                 } else {
-                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: Off", comment: "Live photo mode button off title"), for: [])
+                    self._livePhotoModeButton.setTitle(NSLocalizedString("Live : Off", comment: "Live photo mode button off title"), for: [])
                 }
             }
         }
@@ -658,9 +658,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
             
             DispatchQueue.main.async {
                 if depthDataDeliveryMode == .on {
-                    self._depthDataDeliveryButton.setTitle(NSLocalizedString("Depth Data Delivery: On", comment: "Depth Data Delivery button on title"), for: [])
+                    self._depthDataDeliveryButton.setTitle(NSLocalizedString("Depth : On", comment: "Depth Data Delivery button on title"), for: [])
                 } else {
-                    self._depthDataDeliveryButton.setTitle(NSLocalizedString("Depth Data Delivery: Off", comment: "Depth Data Delivery button off title"), for: [])
+                    self._depthDataDeliveryButton.setTitle(NSLocalizedString("Depth : Off", comment: "Depth Data Delivery button off title"), for: [])
                 }
             }
         }
