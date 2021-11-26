@@ -1,129 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WvI-nl-YBP">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Camera View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainCameraViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOQ-Ic-k8F" userLabel="PreviewView" customClass="PreviewView" customModule="GymApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qB2-dn-JRa">
-                                <rect key="frame" x="133" y="669" width="109" height="32"/>
-                                <segments>
-                                    <segment title="Foto"/>
-                                    <segment title="Video"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1q-Ne-rLT">
-                                <rect key="frame" x="157.66666666666666" y="708" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="VQS-am-s7o"/>
-                                    <constraint firstAttribute="width" constant="60" id="gvg-L1-emc"/>
-                                </constraints>
-                                <state key="normal" image="create"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGl-Dv-tlh">
-                                <rect key="frame" x="317" y="44" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="pVC-51-Z22"/>
-                                    <constraint firstAttribute="height" constant="50" id="rTy-Tn-ShR"/>
-                                </constraints>
-                                <state key="normal" image="camera_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-iv-7Vr">
-                                <rect key="frame" x="8" y="640" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Fe5-1F-tzW"/>
-                                    <constraint firstAttribute="height" constant="60" id="dFL-tg-3ZG"/>
-                                </constraints>
-                                <state key="normal" image="video"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-m7-otT">
-                                <rect key="frame" x="175" y="52" width="25" height="25"/>
-                                <state key="normal" image="timer"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live : On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-lb-PU1">
-                                <rect key="frame" x="154" y="87" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-Ds-UaR">
-                                <rect key="frame" x="8" y="52" width="74" height="30"/>
-                                <state key="normal" title="Depth : On"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHd-iL-PdN">
-                                <rect key="frame" x="112.66666666666669" y="395.66666666666669" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhg-xD-9Be">
-                                <rect key="frame" x="317" y="650" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Dfs-Uq-fgP"/>
-                                    <constraint firstAttribute="height" constant="50" id="lnr-ex-DSq"/>
-                                </constraints>
-                                <state key="normal" image="send_tinsnapook"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="v1q-Ne-rLT" firstAttribute="top" secondItem="qB2-dn-JRa" secondAttribute="bottom" constant="8" id="2aJ-F0-ccf"/>
-                            <constraint firstItem="uDw-lb-PU1" firstAttribute="top" secondItem="gcy-m7-otT" secondAttribute="bottom" constant="10" id="38S-NE-fm3"/>
-                            <constraint firstItem="V2d-Ds-UaR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="3xb-9M-pX3"/>
-                            <constraint firstItem="v1q-Ne-rLT" firstAttribute="top" secondItem="vhg-xD-9Be" secondAttribute="bottom" constant="8" id="5gJ-yx-JMI"/>
-                            <constraint firstItem="gcy-m7-otT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="87r-dH-j3y"/>
-                            <constraint firstItem="V2d-Ds-UaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9KJ-wO-EqD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HOQ-Ic-k8F" secondAttribute="trailing" id="B0m-pQ-DQC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGl-Dv-tlh" secondAttribute="trailing" constant="8" id="GJf-9E-grz"/>
-                            <constraint firstItem="HOQ-Ic-k8F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HKX-H7-9kH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HOQ-Ic-k8F" secondAttribute="bottom" id="HjV-yU-bNR"/>
-                            <constraint firstItem="v1q-Ne-rLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hze-bp-Z9r"/>
-                            <constraint firstItem="HOQ-Ic-k8F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KSg-Qy-jHg"/>
-                            <constraint firstItem="uDw-lb-PU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkm-j5-hZM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v1q-Ne-rLT" secondAttribute="bottom" constant="10" id="TBk-cd-0un"/>
-                            <constraint firstItem="RGl-Dv-tlh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Udp-B8-hxg"/>
-                            <constraint firstItem="v1q-Ne-rLT" firstAttribute="top" secondItem="GpD-iv-7Vr" secondAttribute="bottom" constant="8" id="a8d-Mk-aDs"/>
-                            <constraint firstItem="MHd-iL-PdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLW-yB-gU7"/>
-                            <constraint firstItem="MHd-iL-PdN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oit-wX-5dC"/>
-                            <constraint firstItem="gcy-m7-otT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qYZ-8V-pLl"/>
-                            <constraint firstItem="GpD-iv-7Vr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rFb-bN-GzJ"/>
-                            <constraint firstItem="qB2-dn-JRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfL-ph-aHG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhg-xD-9Be" secondAttribute="trailing" constant="8" id="zQI-rE-wLH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <outlet property="cameraButton" destination="RGl-Dv-tlh" id="3z4-fL-4Fd"/>
-                        <outlet property="cameraUnavailableLabel" destination="MHd-iL-PdN" id="HfL-6v-Pdg"/>
-                        <outlet property="captureModeControl" destination="qB2-dn-JRa" id="ztK-wY-tY3"/>
-                        <outlet property="capturingLivePhotoLabel" destination="uDw-lb-PU1" id="JYZ-BN-TvN"/>
-                        <outlet property="depthDataDeliveryButton" destination="V2d-Ds-UaR" id="qQK-fd-z0C"/>
-                        <outlet property="livePhotoModeButton" destination="gcy-m7-otT" id="a5f-XH-db4"/>
-                        <outlet property="photoButton" destination="v1q-Ne-rLT" id="NO7-fm-DDk"/>
-                        <outlet property="previewView" destination="HOQ-Ic-k8F" id="Ku0-gx-wnn"/>
-                        <outlet property="recordButton" destination="GpD-iv-7Vr" id="XBZ-iD-Ovh"/>
-                        <outlet property="resumeButton" destination="vhg-xD-9Be" id="92L-G3-FAZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2169" y="916"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="bM3-J0-FY2">
             <objects>
@@ -1032,15 +917,10 @@
             <point key="canvasLocation" x="3824.8000000000002" y="-11.083743842364532"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="camera_icon" width="29" height="24"/>
-        <image name="create" width="30" height="30"/>
-        <image name="icon_gym" width="512" height="512"/>
-        <image name="send_tinsnapook" width="24" height="23"/>
-        <image name="timer" width="25" height="25"/>
-        <image name="video" width="23" height="15"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hOJ-7g-vV9"/>
+        <segue reference="8dv-sg-AC2"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="icon_gym" width="512" height="512"/>
+    </resources>
 </document>
